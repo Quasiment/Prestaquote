@@ -101,7 +101,17 @@
 
 			<table>
 				<tr>
-					<td>
+					<td>{if $carrier->name=="Facture"} 
+					FACTURE : <br>
+					Délai de règlement : 1 mois 
+					{else} 
+					DEVIS : 
+					<ul>
+					<li>Conditions de paiement : si accord,faire précéder votre signature de la mention <b>"bon pour accord, le ../../.."</b></li>
+					<li>Conditions de règlement : 40% à l'acceptation du devis, solde à la fin du chantier</li>
+					<li>Devis valable 30 jours</li>
+					</ul>
+					 {/if}
 						<p>{$legal_free_text|escape:'html':'UTF-8'|nl2br}</p>
 					</td>
 				</tr>
